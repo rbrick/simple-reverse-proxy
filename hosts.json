@@ -1,0 +1,6 @@
+{
+  "localhost": {
+    "scheme": "http",
+    "host": "localhost:8080"
+  }
+}
