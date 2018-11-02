@@ -14,7 +14,7 @@ type ProxiedHandler struct {
 }
 
 func (p *ProxiedHandler) ServeHTTP(w http.ResponseWriter, req *http.Request) {
-	if v, ok := p.ReverseProxies[req.URL.Host]; ok {
+	if v, ok := p.ReverseProxies[req.Host]; ok {
 		v.ServeHTTP(w, req)
 		return
 	}
